@@ -1,0 +1,88 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Hasil Prediksi{% endblock %}
+
+{% block content %}
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="card shadow-lg border-0 rounded-4">
+
+<div class="card-body p-5 text-center">
+
+<h2 class="fw-bold text-primary">
+
+HASIL PREDIKSI
+
+</h2>
+
+<hr>
+
+<h3>{{ prediction }}</h3>
+
+<h1 class="display-2 text-danger">
+
+{{ probability }}%
+
+</h1>
+
+<p class="text-muted">
+
+Kemungkinan mengalami obesitas berdasarkan data yang dimasukkan.
+
+</p>
+
+<div class="row mt-5">
+
+<div class="col-md-3">
+
+<h6>Jenis Kelamin</h6>
+
+<p>{{ gender }}</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h6>Umur</h6>
+
+<p>{{ age }} Tahun</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h6>Tinggi</h6>
+
+<p>{{ height }} cm</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h6>Berat</h6>
+
+<p>{{ weight }} kg</p>
+
+</div>
+
+</div>
+
+<a href="/prediction"
+class="btn btn-primary mt-4">
+
+Prediksi Lagi
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

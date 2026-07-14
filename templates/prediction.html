@@ -1,0 +1,161 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Prediksi Risiko Obesitas{% endblock %}
+
+{% block content %}
+
+<section class="py-5" style="background:#f5f7fb; min-height:100vh;">
+
+<div class="container">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Pengisian Data Prediksi Obesitas</h2>
+        <p class="text-muted">
+            Lengkapi data berikut untuk memulai prediksi risiko obesitas.
+        </p>
+    </div>
+
+    <div class="card shadow-lg border-0 rounded-4">
+
+        <div class="card-body p-5">
+
+            <form action="/result" method="POST">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Jenis Kelamin
+                        </label>
+
+                        <select class="form-select" name="gender">
+                            <option>Laki-laki</option>
+                            <option>Perempuan</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Umur
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="age"
+                            placeholder="Contoh : 21">
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Tinggi Badan (cm)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="height"
+                            placeholder="170">
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Berat Badan (kg)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="weight"
+                            placeholder="75">
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Aktivitas Fisik
+                        </label>
+
+                        <select class="form-select" name="activity">
+                            <option>Rendah</option>
+                            <option>Sedang</option>
+                            <option>Tinggi</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Riwayat Keluarga Obesitas
+                        </label>
+
+                        <select class="form-select" name="family">
+                            <option>Ya</option>
+                            <option>Tidak</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Konsumsi Air Putih (Liter/Hari)
+                        </label>
+
+                        <input
+                            type="number"
+                            step="0.1"
+                            class="form-control"
+                            name="water"
+                            placeholder="2.5">
+
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Durasi Tidur (Jam)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="sleep"
+                            placeholder="8">
+
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-4">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-lg px-5">
+
+                        Prediksi Sekarang
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+{% endblock %}
